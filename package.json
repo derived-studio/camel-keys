@@ -1,12 +1,12 @@
 {
   "name": "@derived/rollup-ts-jest-react",
   "version": "0.1.0",
-  "author": "Dan Elder / Mark Bevels",
+  "author": "Mark Bevels",
   "lib": "greeter",
-  "main": "dist/cjs/",
-  "module": "dist/esm/",
-  "browser": "dist/iife/",
-  "types": "dist/types/index.d.ts",
+  "main": "dist/main.cjs.js",
+  "module": "dist/main.esm.js",
+  "browser": "dist/main.min.js",
+  "types": "dist/index.d.ts",
   "engines": {
     "node": ">=12",
     "npm": ">=6"

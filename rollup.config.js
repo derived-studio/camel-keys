@@ -32,7 +32,7 @@ export default {
   plugins: [
     typescript({
       declaration: true,
-      declarationDir: path.resolve(__dirname, `${distFolder}/types/`),
+      declarationDir: path.resolve(__dirname, `${distFolder}/`),
       rootDir: 'src/',
       exclude: ['./**/*.spec.*']
     }),
