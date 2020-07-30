@@ -1,0 +1,72 @@
+{
+  "name": "@derived/rollup-ts-jest-react",
+  "version": "0.1.0",
+  "author": "Dan Elder / Mark Bevels",
+  "lib": "greeter",
+  "main": "dist/cjs/",
+  "module": "dist/esm/",
+  "browser": "dist/iife/",
+  "types": "dist/types/index.d.ts",
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielelder/typescript-rollup-jest.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "description": "Typescript starter project with Rollup and Jest and React",
+  "license": "ISC",
+  "scripts": {
+    "build": "run-s clean lint test rollup",
+    "rollup": "rollup -c",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
+    "test": "jest --coverage --config ./config/jest/jest.config.js",
+    "clean": "rimraf dist",
+    "detach": "rimraf .git && git init"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "run-s lint test",
+      "pre-push": "yarn build"
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-typescript": "^5.0.2",
+    "@testing-library/jest-dom": "^5.11.2",
+    "@testing-library/react": "^10.4.7",
+    "@types/jest": "^24.0.25",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^23.19.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.5",
+    "glob": "^7.1.6",
+    "http-server": "^0.12.0",
+    "husky": "^4.2.5",
+    "jest": "^24.9.0",
+    "livereload": "^0.8.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.27.14",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "ts-jest": "^26.1.4",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
